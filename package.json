@@ -6,5 +6,9 @@
   },
   "dependencies": {
     "remove.bg": "^1.0.0"
-  }
+  },
+"scripts": {
+  "remove-bg": "remove-bg-action"
+}
+
 }
