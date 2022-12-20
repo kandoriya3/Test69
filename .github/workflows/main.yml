@@ -1,3 +1,7 @@
+name: Remove Background
+
+on:
+  workflow_dispatch:
 jobs:
   remove-bg:
     runs-on: ubuntu-latest
