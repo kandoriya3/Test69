@@ -1,17 +1,11 @@
-name: Run
-on:
-  workflow_dispatch:
 jobs:
-  build:
+  remove-bg:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@v1
-      with:
-        node-version: 14
-    - run: npm install
-    - run: npm run build
-    - uses: actions/upload-artifact@v2
-      with:
-        name: build
-        path: build
+      - uses: actions/checkout@v2
+      - name: Remove Background
+        uses: bg-remove-action/remove-bg-action@v1
+        with:
+          api_key: ${{ secrets.REMOVE_BG_API_KEY }}
+          image_file: path/to/image.jpg
+          output_file: path/to/output.png
