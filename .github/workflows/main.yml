@@ -11,4 +11,4 @@ jobs:
         with:
           node-version: 12
       - run: npm install remove.bg
-      - run: npm index
+      - run: npm run index
