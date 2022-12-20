@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "react": "^17.0.1",
-    "react-native-scalable-image": "^2.0.2"
+    "react-native-scalable-image": "^1.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
