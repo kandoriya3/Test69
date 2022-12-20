@@ -1,17 +1,11 @@
-import React from 'react';
-import { Image } from 'react-native-scalable-image';
+const removeBg = require('remove.bg');
 
-// Import the local image file
-const localImage = require('./input.jpg');
+removeBg.apiKey = 'RT1QdU9hA1vytrc22JL5GBrk';
 
-function App() {
-  return (
-    <Image
-      source={localImage}
-      style={{width: 200, height: 200}}
-      backgroundColor="transparent"
-    />
-  );
-}
-
-export default App;
+removeBg.removeBackgroundFromImage('path/to/image.jpg', 'path/to/output.png', (error, result) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log(result);
+  }
+});
