@@ -2,7 +2,7 @@ import React from 'react';
 import { Image } from 'react-native-scalable-image';
 
 // Import the local image file
-const localImage = require('./image.jpg');
+const localImage = require('./input.jpg');
 
 function App() {
   return (
