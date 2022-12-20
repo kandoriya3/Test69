@@ -1,18 +1,20 @@
-name: CI
+name: Build and Deploy
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
-    - name: Use Node.js
-      uses: actions/setup-node@v1
+    - uses: actions/setup-node@v1
       with:
-        node-version: 12.x
-    - name: Install libraries
-      run: npm install react-dropzone axios
-    - name: Run tests
-      run: npm test
+        node-version: 14
+    - run: npm install
+    - run: npm run build
+    - uses: actions/upload-artifact@v2
+      with:
+        name: build
+        path: build
