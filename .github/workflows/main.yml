@@ -1,14 +1,13 @@
-name: Remove Background
+name: Install Dependencies
 
 on: [workflow_dispatch]
 
 jobs:
-  remove-bg:
+  install:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm install
-      - run: npm run index
+      - run: npm install @remove.bg/remove-bg
